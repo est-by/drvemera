@@ -73,8 +73,8 @@ function (selectService, disabled) {
                             mode: 'local',
                             fieldLabel: SR.LEVEL,
                             name: 'Level',
-                            value: drvemera.MesProtectLevel.DefaultValue,
-                            store: drvemera.MesProtectLevel.ToArrayStore(),
+                            value: drvemera.EmeraProtectLevel.DefaultValue,
+                            store: drvemera.EmeraProtectLevel.ToArrayStore(),
                             displayField: base.ENUMS.DisplayField,
                             valueField: base.ENUMS.ValueField,
                             editable: false

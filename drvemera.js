@@ -18,9 +18,9 @@ drvemera.Plugin.prototype.Info = {
     // имя типа Общих настроек
     sstype: "Sys.Services.Drv.EmeraSharedSetting",
     // иконка для списка (активен)
-    image: 'images/mes.png',
+    image: 'images/emera.png',
     // иконка для списка (не активен)
-    imagedisable: 'images/mesdisable.png',
+    imagedisable: 'images/emeradisable.png',
     // заголовок плагина
     title: function () { return drvemera.locale.SR.TITLE; },
     // формы для редактирования

@@ -34,6 +34,10 @@
         <source>Select</source>
         <note priority="1" from="description">SELECT</note>
       </trans-unit>
+      <trans-unit id="4721999311175429772" datatype="html">
+        <source> CE-301 </source>
+        <note priority="1" from="description">TITLE</note>
+      </trans-unit>
       <trans-unit id="5306473977542913614" datatype="html">
         <source>Activity</source>
         <note priority="1" from="description">ACTIVITY</note>
@@ -41,10 +45,6 @@
       <trans-unit id="5729418620241283277" datatype="html">
         <source>Events</source>
         <note priority="1" from="description">ENBLEVENTS</note>
-      </trans-unit>
-      <trans-unit id="5776609078107734353" datatype="html">
-        <source> MES </source>
-        <note priority="1" from="description">TITLE</note>
       </trans-unit>
       <trans-unit id="6252070156626006029" datatype="html">
         <source>None</source>

@@ -26,7 +26,7 @@ drvemera.fixture.prototype.getShared = function () {
         "Enbl3min": false,
         "EnblEvents": false,
         "EnblIm": false,
-        "Level": drvemera.MesProtectLevel.DefaultValue,
+        "Level": drvemera.EmeraProtectLevel.DefaultValue,
         "Psw": "",
         "Arch": 0,
         "Im": 0
@@ -35,7 +35,7 @@ drvemera.fixture.prototype.getShared = function () {
 drvemera.fixture.prototype.initShared = function (mode) {
     var obj = {
         Id: 0,
-        Name: "Setting Mes",
+        Name: "Setting Emera",
         SettingShared: {
             Body: this.getShared()
         },
