@@ -1,0 +1,26 @@
+<#html#>
+<#head#>	
+	<title> <#{%Title%}#> </title>		
+	<#goog#>
+		<#usesoy#>
+		<#uselib#>
+		<#useenv#>
+	<#/goog#>	
+
+	<#css %lib%extjs/resources/css/ext-all.css#>
+	<#css %lib%extjs/examples/shared/examples.css#>	    	
+	
+	<#include nocheck %lib%extjs/adapter/ext/ext-base.js#>
+	<#include nocheck %lib%extjs/ext-all.js#>
+	<#include nocheck %lib%extjs/src/locale/ext-lang-{%:locale=en%}.js#> 		
+		
+	<!-- главный класс = общий вид-->	
+	<#css %root%css/app.css#>
+	<#include nocheck %root%drvemera.js#>
+</head>
+
+<#body#>	
+	<div id="entry"> </div>
+	<#call DriversSystem.LoadTo("entry");#>
+</body>
+</html>

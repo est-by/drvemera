@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file original="SoyMsgBundle" datatype="x-soy-msg-bundle" xml:space="preserve" source-language="en">
+    <body>
+      <trans-unit id="801677855792222301" datatype="html">
+        <source>KI</source>
+        <note priority="1" from="description">KI</note>
+      </trans-unit>
+      <trans-unit id="1167933858829735509" datatype="html">
+        <source>Use KI,KU from device</source>
+        <note priority="1" from="description">KU_KI_Dev</note>
+      </trans-unit>
+      <trans-unit id="1431416938026210429" datatype="html">
+        <source>Password</source>
+        <note priority="1" from="description">PSW</note>
+      </trans-unit>
+      <trans-unit id="2044048482147854783" datatype="html">
+        <source>KU</source>
+        <note priority="1" from="description">KU</note>
+      </trans-unit>
+      <trans-unit id="2538690637668310078" datatype="html">
+        <source>Select data bus for</source>
+        <note priority="1" from="description">SELECTBUSFOR</note>
+      </trans-unit>
+      <trans-unit id="3192753641165405448" datatype="html">
+        <source>Base</source>
+        <note priority="1" from="description">PL_BASE</note>
+      </trans-unit>
+      <trans-unit id="3476348996185438516" datatype="html">
+        <source>3 Min</source>
+        <note priority="1" from="description">ENBL3MIN</note>
+      </trans-unit>
+      <trans-unit id="3797570084942068182" datatype="html">
+        <source>Select</source>
+        <note priority="1" from="description">SELECT</note>
+      </trans-unit>
+      <trans-unit id="5306473977542913614" datatype="html">
+        <source>Activity</source>
+        <note priority="1" from="description">ACTIVITY</note>
+      </trans-unit>
+      <trans-unit id="5729418620241283277" datatype="html">
+        <source>Events</source>
+        <note priority="1" from="description">ENBLEVENTS</note>
+      </trans-unit>
+      <trans-unit id="5776609078107734353" datatype="html">
+        <source> MES </source>
+        <note priority="1" from="description">TITLE</note>
+      </trans-unit>
+      <trans-unit id="6252070156626006029" datatype="html">
+        <source>None</source>
+        <note priority="1" from="description">PL_NONE</note>
+      </trans-unit>
+      <trans-unit id="6392497183202037829" datatype="html">
+        <source>Time correct</source>
+        <note priority="1" from="description">ENBLTIMECORR</note>
+      </trans-unit>
+      <trans-unit id="7286430803380181008" datatype="html">
+        <source>Id</source>
+        <note priority="1" from="description">ID</note>
+      </trans-unit>
+      <trans-unit id="7561588580461157453" datatype="html">
+        <source>Access level</source>
+        <note priority="1" from="description">LEVEL</note>
+      </trans-unit>
+      <trans-unit id="8094660015645089751" datatype="html">
+        <source>Data bus</source>
+        <note priority="1" from="description">DATABUS</note>
+      </trans-unit>
+      <trans-unit id="8917855576371087823" datatype="html">
+        <source>Instantaneous</source>
+        <note priority="1" from="description">ENBLIM</note>
+      </trans-unit>
+      <trans-unit id="8953033926734869941" datatype="html">
+        <source>Name</source>
+        <note priority="1" from="description">NAME</note>
+      </trans-unit>
+      <trans-unit id="8981756179813454368" datatype="html">
+        <source>Device address</source>
+        <note priority="1" from="description">ADDRESS</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,14 @@
+*.md5
+*.tpl.js
+index.html
+*.htt.meta
+index_ru.html
+/bin/
+/Backup/
+/obj/
+*.htm
+/drvmes.tpl_ru.js
+*.tpl_ru.js
+/deps_ru.js
+/deps.js
+/.vs/
