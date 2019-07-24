@@ -22,12 +22,20 @@ drvemera.fixture.prototype.autoconfigInit = function (mode) {
 drvemera.fixture.prototype.getShared = function () {
     drvemera.fixture.initEnums();
     return goog.json.serialize({
-        "EnblTimeCorr": true,
-        "Enbl3min": false,
+        "EnblCounterTariff1": true,
+        "EnblCounterTariff2": true,
+        "EnblCounterTariff3": true,
+        "EnblCounterTariff4": true,
+        "EnblCounterTariff5": true,
+        "EnblCounterTariff6": true,
+        "EnblCounterTariff7": true,
+        "EnblCounterTariff8": true,
+        "Enbl30min": true,
+
+        "EnblTimeCorr": true,        
         "EnblEvents": false,
-        "EnblIm": false,
-        "Level": drvemera.EmeraProtectLevel.DefaultValue,
-        "Psw": "",
+        "EnblIm": false,        
+        
         "Arch": 0,
         "Im": 0
     });
@@ -57,7 +65,7 @@ drvemera.fixture.prototype.init = function (mode)
         Active: true,                             
         DisplayName: "EMera",        
         SettingContent: {
-            Body: "{\"Address\":1,\"KU_KI_Dev\":true,\"KI\":1,\"KU\":1}"
+            Body: "{\"Address\":1,\"Psw\":\"\"}"
         },
         SettingShared: {
             Body: this.getShared()

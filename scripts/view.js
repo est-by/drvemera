@@ -10,37 +10,80 @@ goog.addSingletonGetter(drvemera.view);
 
 drvemera.view.prototype.getSharedItems =
 function (selectService, disabled) {
-    var SR = drvemera.locale.SR;
-    var psw = new Ext.form.TextField({
-        disabled: disabled,
-        hidden: true,
-        xtype: 'textfield',
-        name: 'Psw',
-        inputType: "password",
-        fieldLabel: SR.PSW,
-        value: ""
-    });
-    var aa = function (sender, args) {
-        psw.setVisible(args.value["Level"] != 2);
-    }
-    selectService.on({
-        'loadRecord': aa
-    });
+    var SR = drvemera.locale.SR;    
     return [
+
+        {
+            disabled: disabled,
+            xtype: 'checkbox',
+            name: 'Enbl30min',
+            fieldLabel: SR.ENBL30MIN,
+            value: false
+        },
+        {
+            disabled: disabled,
+            xtype: 'checkbox',
+            name: 'EnblCounterTariff1',
+            fieldLabel: SR.EnblCounterTariff1,
+            value: false
+        },
+        {
+            disabled: disabled,
+            xtype: 'checkbox',
+            name: 'EnblCounterTariff2',
+            fieldLabel: SR.EnblCounterTariff2,
+            value: false
+        },
+        {
+            disabled: disabled,
+            xtype: 'checkbox',
+            name: 'EnblCounterTariff3',
+            fieldLabel: SR.EnblCounterTariff3,
+            value: false
+        },
+        {
+            disabled: disabled,
+            xtype: 'checkbox',
+            name: 'EnblCounterTariff4',
+            fieldLabel: SR.EnblCounterTariff4,
+            value: false
+        },
+        {
+            disabled: disabled,
+            xtype: 'checkbox',
+            name: 'EnblCounterTariff5',
+            fieldLabel: SR.EnblCounterTariff5,
+            value: false
+        },
+        {
+            disabled: disabled,
+            xtype: 'checkbox',
+            name: 'EnblCounterTariff6',
+            fieldLabel: SR.EnblCounterTariff6,
+            value: false
+        },
+        {
+            disabled: disabled,
+            xtype: 'checkbox',
+            name: 'EnblCounterTariff7',
+            fieldLabel: SR.EnblCounterTariff7,
+            value: false
+        },
+        {
+            disabled: disabled,
+            xtype: 'checkbox',
+            name: 'EnblCounterTariff8',
+            fieldLabel: SR.EnblCounterTariff8,
+            value: false
+        },
+
                         {
                             disabled: disabled,
                             xtype: 'checkbox',
                             name: 'EnblTimeCorr',
                             fieldLabel: SR.ENBLTIMECORR,
                             value: true
-                        },
-                        {
-                            disabled: disabled,
-                            xtype: 'checkbox',
-                            name: 'Enbl3min',
-                            fieldLabel: SR.ENBL3MIN,
-                            value: false
-                        },
+                        },                        
                         {
                             disabled: disabled,
                             //hidden: true,
@@ -56,30 +99,7 @@ function (selectService, disabled) {
                             name: 'EnblIm',
                             fieldLabel: SR.ENBLIM,
                             value: false
-                        },
-                        new Ext.form.ComboBox({
-                            disabled: disabled,
-                            listeners: {
-                                select: function (combo, rec, index) {
-                                    var psw = combo.scope.psw;
-                                    psw.setVisible(index > 0);
-                                }
-                            },
-                            scope: {
-                                psw: psw
-                            },
-                            xtype: 'combo',
-                            triggerAction: "all",
-                            mode: 'local',
-                            fieldLabel: SR.LEVEL,
-                            name: 'Level',
-                            value: drvemera.EmeraProtectLevel.DefaultValue,
-                            store: drvemera.EmeraProtectLevel.ToArrayStore(),
-                            displayField: base.ENUMS.DisplayField,
-                            valueField: base.ENUMS.ValueField,
-                            editable: false
-                        }),
-                        psw,
+                        },                     
                         selectService.getScheduleDescription("Arch", disabled),
                         selectService.getSelectSchedule("Arch", disabled),
                         selectService.getScheduleDescription("Im", disabled),
@@ -97,7 +117,8 @@ function (selectService) {
 drvemera.view.prototype.getAutoconfigForms =
 function (selectService) {
     var SR = drvemera.locale.SR;
-	var con = constants.getInstance();
+    var con = constants.getInstance();
+   
     var form = new Ext.FormPanel({
        bodyStyle: con.FormStyle,
         labelWidth: con.FieldLabelSize,
@@ -118,7 +139,7 @@ function (selectService) {
                         //vtype: 'number',
                         fieldLabel: SR.ADDRESS,
                         value: "1-255"
-                    }
+            }
          ]
     });
     return [form];
@@ -128,19 +149,14 @@ function (selectService) {
 drvemera.view.prototype.getForms =
 function (selectService) {
     var SR = drvemera.locale.SR;
-    var ki = new Ext.form.NumberField({        
-        name: 'KI',
-        fieldLabel: SR.KI,
-        value: "0",
-        allowBlank: false
-    });
-    var ku = new Ext.form.NumberField({
-        name: 'KU',
-        fieldLabel: SR.KU,
-        value: "0",
-        allowBlank: false
-    });
     var con = constants.getInstance();
+    var psw = new Ext.form.TextField({
+        xtype: 'textfield',
+        name: 'Psw',
+        inputType: "password",
+        fieldLabel: SR.PSW,
+        value: ""
+    });
     var fItems = [
       {
           hidden: true,
@@ -170,22 +186,7 @@ function (selectService) {
                             value: "0",
                             allowBlank: false
                         },
-                         {
-                             listeners: {
-                                 check: function (checker, state) {
-                                     var f = checker.scope;
-                                     f[0].setVisible(!state);
-                                     f[1].setVisible(!state);
-                                 }
-                             },
-                             scope: [ki, ku],
-                             xtype: 'checkbox',
-                             name: 'KU_KI_Dev',
-                             fieldLabel: SR.KU_KI_Dev,
-                             value: "0",
-                             allowBlank: false
-                         },
-                         ki, ku,
+                        psw
     ];
     fItems.push(selectService.getSharedPanel(this.getSharedItems(selectService, true), drvemera.Plugin));
     //fItems.push(selectService.getSharedDescription());
